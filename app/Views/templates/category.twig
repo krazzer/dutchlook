@@ -1,0 +1,22 @@
+{# @var helper \KikCMS\Services\Website\FrontendHelper #}
+{# @var project \Website\Models\Project #}
+
+{% extends '@website/base.twig' %}
+
+{% block templateBody %}
+    <div class="projectCategory">
+        <div class="container">
+            {% for project in projectMap %}
+                <a href="/finder/file/{{ project.firstImage.image_id }}"
+                   class="item col-lg-3 col-md-4 col-sm-6 col-xs-6" title="{{ project.name }}">
+                    <img src="/finder/thumb/gallery/{{ project.firstImage.image_id }}"/>
+                </a>
+                {% for i, image in project.images %}
+                    {% if i > 0 %}
+                        <a href="/finder/file/{{ image.image_id }}" class="hidden" title="{{ project.name }}"></a>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

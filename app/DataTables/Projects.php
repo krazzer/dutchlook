@@ -5,22 +5,24 @@ namespace Website\DataTables;
 
 
 use KikCMS\Classes\DataTable\DataTable;
-use KikCMS\Models\PageContent;
 use KikCMS\Models\PageLanguage;
 use Website\Forms\ProjectForm;
 use Website\Models\Project;
 
 class Projects extends DataTable
 {
+    /**
+     * @inheritdoc
+     */
     public function getDefaultQuery()
     {
         return parent::getDefaultQuery()
             ->columns([
-                Project::FIELD_ID,
-                Project::FIELD_NAME,
-                PageLanguage::FIELD_NAME . ' as category',
+                'pr.' . Project::FIELD_ID,
+                'pr.' . Project::FIELD_NAME,
+                'pl.' . PageLanguage::FIELD_NAME . ' AS category',
             ])
-            ->leftJoin(PageContent::class, 'pc.page_id = pr.category_id', 'pc');
+            ->leftJoin(PageLanguage::class, 'pl.page_id = pr.category_id', 'pl');
     }
 
     /**
