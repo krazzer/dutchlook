@@ -5,10 +5,12 @@ namespace Website\Classes;
 
 use KikCMS\Classes\Frontend\Extendables\TemplateVariablesBase;
 use KikCMS\Services\Website\FrontendHelper;
+use Website\Services\ClientService;
 use Website\Services\HomeImageService;
 use Website\Services\ProjectService;
 
 /**
+ * @property ClientService $clientService
  * @property FrontendHelper $frontendHelper
  * @property HomeImageService $homeImageService
  * @property ProjectService $projectService
@@ -42,13 +44,18 @@ class TemplateVariables extends TemplateVariablesBase
         $page       = $this->frontendHelper->getCurrentPageLanguage()->page;
         $projectMap = $this->projectService->getByCategoryPage($page);
 
-        foreach ($projectMap as $project)
-        {
-            dlog($project->images->getFirst()->image_id);
-        }
-
         return [
             'projectMap' => $projectMap,
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getClientsVariables(): array
+    {
+        return [
+            'clientMap' => $this->clientService->getMap(),
         ];
     }
 }

@@ -1,0 +1,22 @@
+{# @var helper \KikCMS\Services\Website\FrontendHelper #}
+{# @var project \Website\Models\Project #}
+{# @var client \Website\Models\Client #}
+
+{% extends '@website/base.twig' %}
+
+{% block templateBody %}
+    <div class="projectCategory clients">
+        <div class="container">
+            {% for client in clientMap %}
+                <a href="/finder/file/{{ client.firstImage.image_id }}"
+                   class="item col-lg-3 col-md-4 col-sm-6 col-xs-6" title="{{ client.name }}">
+                    <div class="clientName">{{ client.name }}</div>
+                    <img src="/finder/thumb/gallery/{{ client.firstImage.image_id }}"/>
+                </a>
+                {% for imageId in client.allImageIdsButFirst %}
+                    <a href="/finder/file/{{ imageId }}" class="hidden" title="{{ client.name }}"></a>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
