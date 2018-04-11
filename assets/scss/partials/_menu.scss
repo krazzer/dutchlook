@@ -1,0 +1,67 @@
+//////////////////////////////
+// Menu
+//////////////////////////////
+
+@import '../modules/_variables';
+
+nav{
+    background-size: 150px 150px;
+    width: 210px;
+    padding: 30px;
+
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-size: $fontSizeMedium;
+
+    .logo{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    ul{
+        margin-left: 32px;
+
+        li{
+
+            a{
+                color: $gray;
+            }
+
+            &.selected a, a:hover{
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+
+    .mobile-button{
+        display: none;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+
+        @media #{$mobile} {
+            right: 15px;
+            top: 15px;
+        }
+    }
+
+    @media #{$mobile} {
+        position: static;
+        top: 0;
+        transform: none;
+        padding: 15px;
+
+        ul{
+            display: none;
+        }
+
+        .mobile-button{
+            display: block;
+        }
+    }
+}

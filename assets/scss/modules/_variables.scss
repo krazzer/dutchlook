@@ -1,0 +1,28 @@
+@import "../../../vendor/kiksaus/kikcms/assets/sass/includes/variables";
+@import "../../../vendor/kiksaus/kikcms/assets/sass/includes/mixins";
+
+// fonts
+$mainFont: "Lacrima";
+$defaultFont: 'Open Sans Condensed', sans-serif;
+
+// colors
+$black: #000;
+$mainColor: $black;
+$white: #fff;
+$error: #B00000;
+$gray: #999;
+
+// font-sizes
+$fontSizeSmall: 13px;
+$fontSizeMedium: 20px;
+
+// responsive
+$overHd: "(min-width: 1920px)";
+$desktop: "(min-width: " + $screen-sm + ")";
+$mobile: "(max-width: " + ($screen-sm - 1) + ")";
+$tablet: "(max-width: " + $screen-md-min + ")";
+
+// other
+$bold: 600;
+$borderRadius: 3px;
+$defaultPadding: 30px;

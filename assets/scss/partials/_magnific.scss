@@ -1,0 +1,112 @@
+//////////////////////////////
+// Magnific
+//////////////////////////////
+
+@import '../modules/_variables';
+
+$speed: .4s;
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: all $speed ease-out;
+    -moz-transition: all $speed ease-out;
+    transition: all $speed ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+
+    -webkit-transition: all $speed ease-out;
+    -moz-transition: all $speed ease-out;
+    transition: all $speed ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+
+.mfp-bg{
+    background: #fff;
+}
+
+.mfp-iframe-holder .mfp-close, .mfp-image-holder .mfp-close{
+    color: black;
+}
+
+nav, main{
+    transition: all $speed;
+}
+
+.mfp-zoom-out-cur{
+    nav, main{
+        -webkit-filter: blur(15px);
+        -ms-filter: blur(15px);
+        filter: blur(15px);
+    }
+}
+
+.mfp-title, .mfp-counter{
+    color: #333 !important;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-size: $fontSizeMedium;
+    padding-top: 5px;
+}
+
+.mfp-figure:after{
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+%fadeIn {
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .8s;
+    -moz-animation-duration: .8s;
+    -o-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.mfp-figure{
+    @extend %fadeIn;
+}

@@ -24,7 +24,7 @@ gulp.task('styles', function () {
 // Compile Our Vendor Styles
 gulp.task('vendorStyles', function () {
     return gulp.src([
-
+        'bower_components/magnific-popup/dist/magnific-popup.css'
     ])
         .pipe(plumber())
         .pipe(concat('vendor.css'))
@@ -36,8 +36,7 @@ gulp.task('vendorStyles', function () {
 // Concatenate & Minify JS
 gulp.task('scripts', function () {
     return gulp.src([
-        '../vendor/kiksaus/kikcms/resources/js/utils.js',
-        '../vendor/kiksaus/kikcms/resources/js/kikcms.js',
+        'js/iso.js',
         'js/app.js'
     ])
         .pipe(plumber())
@@ -49,7 +48,9 @@ gulp.task('scripts', function () {
 // Concatenate & Minify Vendor JS
 gulp.task('vendorScripts', function () {
     return gulp.src([
-        'bower_components/jquery/dist/jquery.min.js'
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/isotope/dist/isotope.pkgd.min.js',
+        'bower_components/magnific-popup/dist/jquery.magnific-popup.js'
     ])
         .pipe(plumber())
         .pipe(concat('vendor.js'))

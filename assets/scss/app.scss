@@ -1,3 +1,17 @@
-@import "partials/style";
-@import "partials/menu";
-@import "partials/home";
+//////////////////////////////
+// Styles
+//////////////////////////////
+
+@import 'partials/iso';
+@import 'partials/main';
+@import 'partials/magnific';
+
+@import 'partials/menu';
+@import 'partials/header';
+@import 'partials/footer';
+
+@import 'partials/home';
+@import 'partials/projectCategory';
+@import 'partials/clients';
+@import 'partials/default';
+@import 'partials/contact';

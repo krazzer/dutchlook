@@ -1,0 +1,38 @@
+//////////////////////////////
+// Project Category
+//////////////////////////////
+
+@import '../modules/_variables';
+
+@media #{$mobile} {
+    body.project_category main {
+        padding-right: $defaultPadding - 25;
+    }
+}
+
+.projectCategory{
+    padding: $defaultPadding $defaultPadding - 10 $defaultPadding - 10 $defaultPadding;
+
+    .item{
+        padding: 0 10px 10px 0;
+        cursor: pointer;
+
+        img{
+            width: 100%;
+            opacity: 0;
+            transition: opacity 1s;
+
+            &.loaded{
+                opacity: 1;
+            }
+        }
+    }
+
+    @media #{$mobile} {
+        padding: 0;
+
+        .item{
+            padding: 0 10px 10px 0;
+        }
+    }
+}

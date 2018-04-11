@@ -1,0 +1,69 @@
+//////////////////////////////
+// Home
+//////////////////////////////
+
+@import '../modules/_variables';
+
+.carousel {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item, .active.left, .active.right {
+            opacity: 0;
+        }
+
+        .active, .next.left, .prev.right {
+            opacity: 1;
+        }
+
+        .next, .prev, .active.left, .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+.carousel{
+    height: 100%;
+    width: 100%;
+    padding: $defaultPadding;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &.loaded{
+        opacity: 1;
+    }
+
+    .carousel-inner{
+        height: 100%;
+
+        .item{
+            width: 100%;
+            height: 100%;
+
+            //noinspection CssOptimizeSimilarProperties
+            .slide{
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+
+                @media #{$mobile} {
+                    background-position: top center;
+                }
+            }
+        }
+    }
+
+    @media #{$mobile}{
+        height: 600px;
+        padding: 0;
+    }
+}
