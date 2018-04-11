@@ -10,6 +10,9 @@ use Website\Models\HomeImage;
 
 class HomeImages extends DataTable
 {
+    /** @inheritdoc */
+    protected $sortable = true;
+
     /**
      * @inheritdoc
      */
