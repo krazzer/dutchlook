@@ -39,3 +39,23 @@ main{
         height: auto;
     }
 }
+
+.btn-primary{
+    border-radius: 0;
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    padding-top: 10px;
+
+    &:hover{
+        background-color: #222;
+        border-color: #222;
+    }
+
+    &:active, &:hover:active{
+        background-color: #444;
+        border-color: #444;
+    }
+}

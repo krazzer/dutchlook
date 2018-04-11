@@ -5,6 +5,7 @@ namespace Website\Classes;
 
 use KikCMS\Classes\Frontend\Extendables\TemplateVariablesBase;
 use KikCMS\Services\Website\FrontendHelper;
+use Website\Forms\ContactForm;
 use Website\Services\ClientService;
 use Website\Services\HomeImageService;
 use Website\Services\ProjectService;
@@ -23,6 +24,16 @@ class TemplateVariables extends TemplateVariablesBase
     public function getGlobalVariables(): array
     {
         return [
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getContactVariables(): array
+    {
+        return [
+            'form' => (new ContactForm)->render()
         ];
     }
 
