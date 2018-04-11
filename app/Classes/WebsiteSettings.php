@@ -8,6 +8,11 @@ use KikCMS\Config\MenuConfig;
 use KikCMS\Services\Cms\CmsMenuGroup;
 use KikCMS\Services\Cms\CmsMenuItem;
 use Phalcon\Mvc\Router\Group;
+use Website\Services\CategoryService;
+use Website\Services\ClientService;
+use Website\Services\HomeImageService;
+use Website\Services\ProjectImageService;
+use Website\Services\ProjectService;
 
 /**
  * @inheritdoc
@@ -26,6 +31,7 @@ class WebsiteSettings extends WebsiteSettingsBase
      */
     public function addBackendRoutes(Group $backend)
     {
+        $backend->add('/projects', 'Module::projects');
     }
 
     /**
@@ -45,6 +51,12 @@ class WebsiteSettings extends WebsiteSettingsBase
      */
     public function getServices(): array
     {
-        return [];
+        return [
+            CategoryService::class,
+            ClientService::class,
+            HomeImageService::class,
+            ProjectImageService::class,
+            ProjectService::class,
+        ];
     }
 }
