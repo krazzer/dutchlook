@@ -8,6 +8,12 @@
     .carousel-inner {
         .item {
             transition-property: opacity;
+            //transition: opacity .3s;
+            //opacity: 0;
+
+            //&:active{
+            //    opacity: 1;
+            //}
         }
 
         .item, .active.left, .active.right {
@@ -47,13 +53,11 @@
             width: 100%;
             height: 100%;
 
-            //noinspection CssOptimizeSimilarProperties
             .slide{
                 width: 100%;
                 height: 100%;
-                background-repeat: no-repeat;
+                background: no-repeat center center;
                 background-size: contain;
-                background-position: center center;
 
                 @media #{$mobile} {
                     background-position: top center;

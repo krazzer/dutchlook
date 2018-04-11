@@ -50,7 +50,10 @@ gulp.task('vendorScripts', function () {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/isotope/dist/isotope.pkgd.min.js',
-        'bower_components/magnific-popup/dist/jquery.magnific-popup.js'
+        'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+        '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+        '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+        '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js'
     ])
         .pipe(plumber())
         .pipe(concat('vendor.js'))

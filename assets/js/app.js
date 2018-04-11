@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     $("#homeCarousel").carousel({
         interval: 3500,
         cycle: true

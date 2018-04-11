@@ -4,10 +4,10 @@
 namespace Website\ObjectList;
 
 
-use KikCmsCore\Classes\ObjectMap;
+use KikCmsCore\Classes\ObjectList;
 use Website\Models\HomeImage;
 
-class HomeImageMap extends ObjectMap
+class HomeImageList extends ObjectList
 {
     /**
      * @param int|string $key
