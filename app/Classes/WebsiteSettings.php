@@ -32,6 +32,7 @@ class WebsiteSettings extends WebsiteSettingsBase
     public function addBackendRoutes(Group $backend)
     {
         $backend->add('/projects', 'Module::projects');
+        $backend->add('/clients', 'Module::clients');
     }
 
     /**
