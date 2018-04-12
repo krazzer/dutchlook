@@ -1,10 +1,14 @@
+function ini() {
+    iso(".container", ".item", 0); //number is gutter
+}
+
 $(function () {
     ini();
 });
 
-function ini() {
-    iso(".container", ".item", 0); //number is gutter
-}
+$(window).on('load', function () {
+    ini();
+});
 
 $(window).resize(function () {
     ini();
