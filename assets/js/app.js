@@ -41,7 +41,7 @@ function initializeGoogleMaps() {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         scrollwheel: false,
         mapTypeControl: false,
-        apiKey: 'AIzaSyDqlkWOqB0ZlMcmvCLv-_awN6ja_7laedA',
+        apiKey: 'AIzaSyCVe3oMZf-LR9_Zop0inAAqttBbLBWHYRw',
         styles: [
             {"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},
             {"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},
