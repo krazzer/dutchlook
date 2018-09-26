@@ -34,10 +34,10 @@ class TemplateFields extends TemplateFieldsBase
     public function getFields(): array
     {
         return [
-            'content'    => (new WysiwygField('content', 'Inhoud pagina', [new PresenceOf()]))->storePage(),
+            'content'    => (new WysiwygField('content*:value', 'Inhoud pagina', [new PresenceOf()])),
             'projects'   => (new ButtonField('Projecten', 'Projecten kunnen worden bewerkt in de projecten module', 'Ga naar projecten', '/cms/projects')),
             'homeImages' => (new DataTableField(new HomeImages, 'Afbeeldingen')),
-            'video'      => (new TextField('video', 'Video'))->storePage(false),
+            'video'      => (new TextField('video:value', 'Video')),
         ];
     }
 }
