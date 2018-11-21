@@ -59,7 +59,7 @@ class Client extends Model
         $imageIds = [];
 
         foreach ($this->projects as $i => $project){
-            foreach ($project->images as $j => $image){
+            foreach ($project->projectImages as $j => $image){
                 if($i == 0 && $j == 0){
                     continue;
                 }

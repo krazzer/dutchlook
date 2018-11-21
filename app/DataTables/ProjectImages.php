@@ -10,9 +10,6 @@ use Website\Models\ProjectImage;
 
 class ProjectImages extends DataTable
 {
-    /** @inheritdoc */
-    protected $parentRelationKey = ProjectImage::FIELD_PROJECT_ID;
-
     /**
      * @inheritdoc
      */

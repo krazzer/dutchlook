@@ -8,7 +8,7 @@ use KikCmsCore\Classes\Model;
 use Phalcon\Mvc\Model\Resultset\Simple;
 
 /**
- * @property ProjectImage[]|Simple $images
+ * @property ProjectImage[]|Simple $projectImages
  */
 class Project extends Model
 {
@@ -21,6 +21,8 @@ class Project extends Model
     const FIELD_CLIENT_ID   = 'client_id';
     const FIELD_CREATED     = 'created';
 
+    const IMAGES = 'projectImages';
+
     /**
      * @inheritdoc
      */
@@ -28,7 +30,7 @@ class Project extends Model
     {
         parent::initialize();
 
-        $this->hasMany(self::FIELD_ID, ProjectImage::class, ProjectImage::FIELD_PROJECT_ID, ['alias' => 'images']);
+        $this->hasMany(self::FIELD_ID, ProjectImage::class, ProjectImage::FIELD_PROJECT_ID, ['alias' => self::IMAGES]);
     }
 
     /**
@@ -36,6 +38,6 @@ class Project extends Model
      */
     public function getFirstImage(): ?ProjectImage
     {
-        return $this->images->getFirst();
+        return $this->projectImages->getFirst();
     }
 }

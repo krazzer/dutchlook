@@ -11,7 +11,7 @@
                    class="item col-lg-3 col-md-4 col-sm-6 col-xs-6" title="{{ project.name }}">
                     <img src="/finder/thumb/gallery/{{ project.firstImage.image_id }}"/>
                 </a>
-                {% for i, image in project.images %}
+                {% for i, image in project.projectImages %}
                     {% if i > 0 %}
                         <a href="/finder/file/{{ image.image_id }}" class="hidden" title="{{ project.name }}"></a>
                     {% endif %}
