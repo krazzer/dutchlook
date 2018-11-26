@@ -5,6 +5,7 @@ namespace Website\Classes;
 
 use KikCMS\Classes\Frontend\Extendables\WebsiteSettingsBase;
 use KikCMS\Config\MenuConfig;
+use KikCMS\ObjectLists\MenuGroupMap;
 use KikCMS\Services\Cms\CmsMenuGroup;
 use KikCMS\Services\Cms\CmsMenuItem;
 use Phalcon\Mvc\Router\Group;
@@ -38,13 +39,13 @@ class WebsiteSettings extends WebsiteSettingsBase
     /**
      * @inheritdoc
      */
-    public function getMenuGroups(array $menuGroups): array
+    public function getMenuGroupMap(MenuGroupMap $menuGroupMap): MenuGroupMap
     {
-        $webshopMenuGroup = (new CmsMenuGroup('projects', "Projecten"))
+        $menuGroup = (new CmsMenuGroup('projects', "Projecten"))
             ->add(new CmsMenuItem('projects', 'Projecten', 'cms/projects'))
             ->add(new CmsMenuItem('clients', 'Klanten', 'cms/clients'));
 
-        return array_add_after_key($menuGroups, MenuConfig::MENU_GROUP_CONTENT, 'projects', $webshopMenuGroup);
+        return $menuGroupMap->addAfter($menuGroup, 'Projecten', MenuConfig::MENU_GROUP_CONTENT);
     }
 
     /**
