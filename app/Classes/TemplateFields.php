@@ -35,7 +35,7 @@ class TemplateFields extends TemplateFieldsBase
     {
         return [
             'content'    => (new WysiwygField('content*:value', 'Inhoud pagina', [new PresenceOf()])),
-            'projects'   => (new ButtonField('Projecten', 'Projecten kunnen worden bewerkt in de projecten module', 'Ga naar projecten', '/cms/projects')),
+            'projects'   => (new ButtonField('projects', 'Projecten', 'Projecten kunnen worden bewerkt in de projecten module', 'Ga naar projecten', '/cms/projects')),
             'homeImages' => (new DataTableField('homeImages', HomeImages::class, 'Afbeeldingen')),
             'video'      => (new TextField('video:value', 'Video')),
         ];
