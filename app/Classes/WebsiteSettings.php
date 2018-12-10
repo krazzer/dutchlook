@@ -9,11 +9,6 @@ use KikCMS\ObjectLists\MenuGroupMap;
 use KikCMS\Services\Cms\CmsMenuGroup;
 use KikCMS\Services\Cms\CmsMenuItem;
 use Phalcon\Mvc\Router\Group;
-use Website\Services\CategoryService;
-use Website\Services\ClientService;
-use Website\Services\HomeImageService;
-use Website\Services\ProjectImageService;
-use Website\Services\ProjectService;
 
 /**
  * @inheritdoc
@@ -46,19 +41,5 @@ class WebsiteSettings extends WebsiteSettingsBase
             ->add(new CmsMenuItem('clients', 'Klanten', 'cms/clients'));
 
         return $menuGroupMap->addAfter($menuGroup, 'Projecten', MenuConfig::MENU_GROUP_CONTENT);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getServices(): array
-    {
-        return [
-            CategoryService::class,
-            ClientService::class,
-            HomeImageService::class,
-            ProjectImageService::class,
-            ProjectService::class,
-        ];
     }
 }
