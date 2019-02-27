@@ -6,8 +6,8 @@ namespace Website\Classes;
 use KikCMS\Classes\Frontend\Extendables\WebsiteSettingsBase;
 use KikCMS\Config\MenuConfig;
 use KikCMS\ObjectLists\MenuGroupMap;
-use KikCMS\Services\Cms\CmsMenuGroup;
-use KikCMS\Services\Cms\CmsMenuItem;
+use KikCMS\Objects\CmsMenuGroup;
+use KikCMS\Objects\CmsMenuItem;
 use Phalcon\Mvc\Router\Group;
 
 /**
