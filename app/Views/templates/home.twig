@@ -9,7 +9,7 @@
         <div class="carousel-inner">
             {% for i, homeImage in homeImageList %}
                 <div class="item{{ i == 0 ? ' active' }}">
-                    <div class="slide" style="background-image: url('/finder/file/{{ homeImage.image_id }}');"></div>
+                    <div class="slide" style="{{ mediaFileBg(homeImage.image_id) }}"></div>
                 </div>
             {% endfor %}
         </div>
