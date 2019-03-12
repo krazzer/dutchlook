@@ -9,7 +9,7 @@
             {% for project in projectMap %}
                 <a href="{{ mediaFile(project.firstImage.image_id) }}"
                    class="item col-lg-3 col-md-4 col-sm-6 col-xs-6" title="{{ project.name }}">
-                    <img src="/finder/thumb/gallery/{{ project.firstImage.image_id }}"/>
+                    <img src="{{ mediaFile(project.firstImage.image_id, 'gallery') }}"/>
                 </a>
                 {% for i, image in project.projectImages %}
                     {% if i > 0 %}

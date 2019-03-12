@@ -8,3 +8,4 @@ storage
 vendor
 !vendor/kiksaus/*
 env
+public_html/media
