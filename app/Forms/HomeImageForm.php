@@ -6,6 +6,7 @@ namespace Website\Forms;
 
 use KikCMS\Classes\WebForm\DataForm\DataForm;
 use Phalcon\Validation\Validator\PresenceOf;
+use Website\DataTables\HomeImageRandoms;
 use Website\Models\HomeImage;
 
 class HomeImageForm extends DataForm
@@ -24,5 +25,6 @@ class HomeImageForm extends DataForm
     protected function initialize()
     {
         $this->addFileField(HomeImage::FIELD_IMAGE_ID, 'Afbeelding', [new PresenceOf]);
+        $this->addDataTableField('randomImages', HomeImageRandoms::class, 'Random opvolg afbeeldingen');
     }
 }

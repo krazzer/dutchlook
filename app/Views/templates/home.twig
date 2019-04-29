@@ -5,12 +5,18 @@
 
 {% block templateBody %}
 
-    <div id="homeCarousel" class="carousel slide" data-ride="carousel" data-pause="false">
-        <div class="carousel-inner">
+    <div class="projectCategory">
+        <div class="container">
             {% for i, homeImage in homeImageList %}
-                <div class="item{{ i == 0 ? ' active' }}">
-                    <div class="slide" style="{{ mediaFileBg(homeImage.image_id) }}"></div>
-                </div>
+                <a href="{{ mediaFile(homeImage.image_id) }}"
+                   class="item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <img src="{{ mediaFile(homeImage.image_id, 'gallery') }}"/>
+                </a>
+                {#{% for i, image in project.projectImages %}#}
+                    {#{% if i > 0 %}#}
+                        {#<a href="{{ mediaFile(image.image_id) }}" class="hidden" title="{{ project.name }}"></a>#}
+                    {#{% endif %}#}
+                {#{% endfor %}#}
             {% endfor %}
         </div>
     </div>

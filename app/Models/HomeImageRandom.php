@@ -1,17 +1,16 @@
 <?php
 
-
 namespace Website\Models;
-
 
 use KikCmsCore\Classes\Model;
 
-class HomeImage extends Model
+class HomeImageRandom extends Model
 {
-    const TABLE = 'dutchlook_home_image';
-    const ALIAS = 'hi';
+    const TABLE = 'dutchlook_home_image_random';
+    const ALIAS = 'hir';
 
     const FIELD_ID            = 'id';
+    const FIELD_HOME_IMAGE_ID = 'home_image_id';
     const FIELD_IMAGE_ID      = 'image_id';
     const FIELD_DISPLAY_ORDER = 'display_order';
 
@@ -21,7 +20,5 @@ class HomeImage extends Model
     public function initialize()
     {
         parent::initialize();
-
-        $this->hasMany(self::FIELD_ID, HomeImageRandom::class, HomeImageRandom::FIELD_HOME_IMAGE_ID, ['alias' => 'randomImages']);
     }
 }
