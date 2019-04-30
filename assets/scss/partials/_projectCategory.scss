@@ -11,10 +11,10 @@
 }
 
 .projectCategory{
-    padding: $defaultPadding $defaultPadding - 10 $defaultPadding - 10 $defaultPadding;
+    padding: $defaultPadding $defaultPadding - 1 $defaultPadding - 1 $defaultPadding;
 
     .item{
-        padding: 0 10px 10px 0;
+        padding: 0 1px 1px 0;
         cursor: pointer;
 
         img{
@@ -32,7 +32,7 @@
         padding: 0;
 
         .item{
-            padding: 0 10px 10px 0;
+            padding: 0 1px 1px 0;
         }
     }
 }
