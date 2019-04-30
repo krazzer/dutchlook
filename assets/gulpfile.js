@@ -53,7 +53,8 @@ gulp.task('vendorScripts', function () {
         'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
         '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
         '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
-        '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js'
+        '../vendor/kiksaus/kikcms/assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+        'bower_components/df-visible/jquery.visible.min.js'
     ])
         .pipe(plumber())
         .pipe(concat('vendor.js'))

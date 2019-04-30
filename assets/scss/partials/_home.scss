@@ -4,6 +4,10 @@
 
 @import '../modules/_variables';
 
+.projectCategory.home .item{
+    transition: left .75s, top .75s;
+}
+
 .carousel {
     .carousel-inner {
         .item {

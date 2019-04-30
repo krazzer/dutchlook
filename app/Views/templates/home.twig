@@ -1,22 +1,20 @@
-{# @var carousel \Website\Models\Carousel[] #}
-{# @var helper \KikCMS\Services\Website\FrontendHelper #}
+{# @var homeImage \Website\Models\HomeImage #}
 
 {% extends '@website/base.twig' %}
 
 {% block templateBody %}
 
-    <div class="projectCategory">
+    <div class="projectCategory home">
         <div class="container">
-            {% for i, homeImage in homeImageList %}
-                <a href="{{ mediaFile(homeImage.image_id) }}"
-                   class="item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            {% for homeImage in homeImageList %}
+                <a href="{{ mediaFile(homeImage.image_id) }}" class="item col-lg-3 col-md-4 col-sm-6 col-xs-6"
+                   data-image="{{ mediaFile(homeImage.image_id, 'gallery') }}">
                     <img src="{{ mediaFile(homeImage.image_id, 'gallery') }}"/>
                 </a>
-                {#{% for i, image in project.projectImages %}#}
-                    {#{% if i > 0 %}#}
-                        {#<a href="{{ mediaFile(image.image_id) }}" class="hidden" title="{{ project.name }}"></a>#}
-                    {#{% endif %}#}
-                {#{% endfor %}#}
+                {% for image in homeImage.randomImages %}
+                    <a href="{{ mediaFile(image.image_id) }}" data-image="{{ mediaFile(image.image_id, 'gallery') }}"
+                       class="hidden"></a>
+                {% endfor %}
             {% endfor %}
         </div>
     </div>

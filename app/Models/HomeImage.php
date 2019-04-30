@@ -5,7 +5,11 @@ namespace Website\Models;
 
 
 use KikCmsCore\Classes\Model;
+use Phalcon\Mvc\Model\Resultset\Simple;
 
+/**
+ * @property HomeImageRandom[]|Simple randomImages
+ */
 class HomeImage extends Model
 {
     const TABLE = 'dutchlook_home_image';
