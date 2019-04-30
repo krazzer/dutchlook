@@ -23,7 +23,6 @@ class TemplateFields extends TemplateFieldsBase
             (new Template('default', 'Standaard', ['content', 'video'])),
             (new Template('home', 'Home', ['homeImages'])),
             (new Template('category', 'Categorie', ['projects'])),
-            (new Template('clients', 'Klanten', ['projects'])),
             (new Template('contact', 'Contact', ['content'])),
         ];
     }

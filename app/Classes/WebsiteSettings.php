@@ -37,8 +37,7 @@ class WebsiteSettings extends WebsiteSettingsBase
     public function getMenuGroupMap(MenuGroupMap $menuGroupMap): MenuGroupMap
     {
         $menuGroup = (new CmsMenuGroup('projects', "Projecten"))
-            ->add(new CmsMenuItem('projects', 'Projecten', 'cms/projects'))
-            ->add(new CmsMenuItem('clients', 'Klanten', 'cms/clients'));
+            ->add(new CmsMenuItem('projects', 'Projecten', 'cms/projects'));
 
         return $menuGroupMap->addAfter($menuGroup, 'Projecten', MenuConfig::MENU_GROUP_CONTENT);
     }
