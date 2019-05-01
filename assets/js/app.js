@@ -69,7 +69,7 @@ $(function () {
         imagesWithRandom[i].find('img').attr('src', $currentItem.attr('data-image'));
         imagesWithRandom[i].attr('data-last', 1);
 
-        ini();
+        setTimeout(ini, 100);
     }, 5000)
 });
 
