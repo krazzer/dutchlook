@@ -5,13 +5,13 @@
 
 {% block templateBody %}
     <div class="content-default">
-        {% if video %}
-            <div class="videoWrapper">
-                <iframe src="{{ video }}?autoplay=1&controls=0" frameborder="0"></iframe>
-            </div>
-        {% endif %}
         <div class="content col-lg-6">
             {{ content|raw }}
         </div>
+        {% if video %}
+            <div class="videoWrapper col-lg-6">
+                <iframe src="{{ video }}?autoplay=1&controls=0" frameborder="0"></iframe>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
