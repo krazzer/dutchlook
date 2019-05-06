@@ -67,7 +67,26 @@ $(function () {
             $currentItem.attr('data-current', 1);
         }
 
-        imagesWithRandom[i].find('img').attr('src', $currentItem.attr('data-image'));
+        var currentSrc = imagesWithRandom[i].find('img:not(.switch)').attr('src');
+
+        if( ! imagesWithRandom[i].find('.switch').length){
+            imagesWithRandom[i].find('img').before('<img src="' + currentSrc + '" class="switch">');
+        } else {
+            imagesWithRandom[i].find('.switch').attr('src', currentSrc);
+        }
+
+        imagesWithRandom[i].find('.switch').removeClass('hidden');
+
+        setTimeout(function () {
+            imagesWithRandom[i].find('.switch').addClass('fadeOut');
+        });
+
+        setTimeout(function () {
+            imagesWithRandom[i].find('.switch').removeClass('fadeOut');
+            imagesWithRandom[i].find('.switch').addClass('hidden');
+        }, 1000);
+
+        imagesWithRandom[i].find('img:not(.switch)').attr('src', $currentItem.attr('data-image'));
         imagesWithRandom[i].attr('data-last', 1);
 
         setTimeout(ini, 100);

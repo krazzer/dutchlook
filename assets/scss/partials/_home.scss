@@ -4,20 +4,32 @@
 
 @import '../modules/_variables';
 
-.projectCategory.home.transition .item{
-    transition: left .75s, top .75s;
+.projectCategory.home{
+
+    .item .switch{
+        position: absolute;
+        z-index: 5;
+        opacity: 1;
+        transition: opacity .75s;
+
+        &.fadeOut{
+            opacity: 0;
+        }
+
+        &.hidden{
+            display: none;
+        }
+    }
+
+    &.transition .item{
+        transition: left .75s, top .75s;
+    }
 }
 
 .carousel {
     .carousel-inner {
         .item {
             transition-property: opacity;
-            //transition: opacity .3s;
-            //opacity: 0;
-
-            //&:active{
-            //    opacity: 1;
-            //}
         }
 
         .item, .active.left, .active.right {
