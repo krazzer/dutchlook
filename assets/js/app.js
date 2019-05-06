@@ -43,11 +43,16 @@ $(function () {
 
         var i = Math.floor(Math.random() * imagesWithRandom.length);
 
+
         $homeItems.removeAttr('data-last');
 
         var $nextItems = imagesWithRandom[i].nextUntil('.item');
 
         var $currentItem = $nextItems.first();
+
+        $nextItems.each(function () {
+            $(this).attr('href', $(this).attr('data-url'));
+        });
 
         $nextItems.each(function () {
             if($(this).attr('data-current') == 1){
@@ -61,6 +66,9 @@ $(function () {
             }
         });
 
+        $currentItem.attr('XXX', 'XXXXXX');
+        $currentItem.attr('href', imagesWithRandom[i].attr('data-url'));
+        console.log($currentItem.attr('href'));
         $nextItems.removeAttr('data-current');
 
         if($currentItem.hasClass('hidden')){
@@ -87,10 +95,11 @@ $(function () {
         }, 1000);
 
         imagesWithRandom[i].find('img:not(.switch)').attr('src', $currentItem.attr('data-image'));
+        imagesWithRandom[i].attr('href', $currentItem.attr('data-url'));
         imagesWithRandom[i].attr('data-last', 1);
 
         setTimeout(ini, 100);
-    }, 5000)
+    }, 2000)
 });
 
 /**

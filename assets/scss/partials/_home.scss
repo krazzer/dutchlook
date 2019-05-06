@@ -11,6 +11,7 @@
         z-index: 5;
         opacity: 1;
         transition: opacity .75s;
+        width: calc(100% - 2px);
 
         &.fadeOut{
             opacity: 0;

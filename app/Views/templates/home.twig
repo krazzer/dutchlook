@@ -8,11 +8,12 @@
         <div class="container">
             {% for homeImage in homeImageList %}
                 <a href="{{ mediaFile(homeImage.image_id) }}" class="item col-lg-3 col-md-4 col-sm-6 col-xs-6"
-                   data-image="{{ mediaFile(homeImage.image_id, 'gallery') }}">
+                   data-image="{{ mediaFile(homeImage.image_id, 'gallery') }}" data-url="{{ mediaFile(homeImage.image_id) }}">
                     <img src="{{ mediaFile(homeImage.image_id, 'gallery') }}"/>
                 </a>
-                {% for image in homeImage.randomImages %}
+                {% for index, image in homeImage.randomImages %}
                     <a href="{{ mediaFile(image.image_id) }}" data-image="{{ mediaFile(image.image_id, 'gallery') }}"
+                       data-url="{{ mediaFile(image.image_id) }}"
                        class="hidden"></a>
                 {% endfor %}
             {% endfor %}
