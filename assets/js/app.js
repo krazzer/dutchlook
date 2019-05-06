@@ -30,6 +30,7 @@ $(function () {
     });
 
     $(".projectCategory img").addClass('loaded');
+    $('.projectCategory.home').addClass('transition');
 
     $homeItems = $('.projectCategory.home .item');
 
