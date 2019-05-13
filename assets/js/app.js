@@ -101,7 +101,7 @@ $(function () {
         imagesWithRandom[i].attr('data-last', 1);
 
         setTimeout(ini, 100);
-    }, 2000)
+    }, 5000)
 });
 
 /**
