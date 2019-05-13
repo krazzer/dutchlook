@@ -1,5 +1,5 @@
 var lastRandomizedImage = null;
-var $homeItems = null;
+var $homeItems          = null;
 
 $(function () {
     $("#homeCarousel").carousel({
@@ -35,9 +35,13 @@ $(function () {
     $homeItems = $('.projectCategory.home .item');
 
     setInterval(function () {
+        if ($('.mfp-bg').length) {
+            return;
+        }
+
         var imagesWithRandom = getVisibleImagesWithRandomNotCurrent();
 
-        if( ! imagesWithRandom.length){
+        if (!imagesWithRandom.length) {
             return;
         }
 
@@ -55,8 +59,8 @@ $(function () {
         });
 
         $nextItems.each(function () {
-            if($(this).attr('data-current') == 1){
-                if($(this).next('.hidden').length){
+            if ($(this).attr('data-current') == 1) {
+                if ($(this).next('.hidden').length) {
                     $currentItem = $(this).next();
                 } else {
                     $currentItem = imagesWithRandom[i];
@@ -66,18 +70,17 @@ $(function () {
             }
         });
 
-        $currentItem.attr('XXX', 'XXXXXX');
         $currentItem.attr('href', imagesWithRandom[i].attr('data-url'));
         console.log($currentItem.attr('href'));
         $nextItems.removeAttr('data-current');
 
-        if($currentItem.hasClass('hidden')){
+        if ($currentItem.hasClass('hidden')) {
             $currentItem.attr('data-current', 1);
         }
 
         var currentSrc = imagesWithRandom[i].find('img:not(.switch)').attr('src');
 
-        if( ! imagesWithRandom[i].find('.switch').length){
+        if (!imagesWithRandom[i].find('.switch').length) {
             imagesWithRandom[i].find('img').before('<img src="' + currentSrc + '" class="switch">');
         } else {
             imagesWithRandom[i].find('.switch').attr('src', currentSrc);
