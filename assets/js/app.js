@@ -100,7 +100,7 @@ $(function () {
         imagesWithRandom[i].attr('href', $currentItem.attr('data-url'));
         imagesWithRandom[i].attr('data-last', 1);
 
-        setTimeout(ini, 100);
+        setTimeout(ini, 250);
     }, 5000)
 });
 
