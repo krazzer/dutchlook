@@ -71,7 +71,6 @@ $(function () {
         });
 
         $currentItem.attr('href', imagesWithRandom[i].attr('data-url'));
-        console.log($currentItem.attr('href'));
         $nextItems.removeAttr('data-current');
 
         if ($currentItem.hasClass('hidden')) {
