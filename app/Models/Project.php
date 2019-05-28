@@ -31,6 +31,7 @@ class Project extends Model
         parent::initialize();
 
         $this->hasMany(self::FIELD_ID, ProjectImage::class, ProjectImage::FIELD_PROJECT_ID, ['alias' => self::IMAGES]);
+        $this->skipAttributesOnCreate([self::FIELD_CREATED]);
     }
 
     /**

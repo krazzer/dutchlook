@@ -17,9 +17,6 @@ use Website\Services\ClientService;
  */
 class ProjectForm extends DataForm
 {
-    /** @inheritdoc */
-    protected $saveCreatedAt;
-
     /**
      * @inheritdoc
      */
