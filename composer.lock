@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07c476853af8002dc16ba5d9036e7a35",
+    "content-hash": "642985b029842db949c9c00b409854d1",
     "packages": [
         {
             "name": "doctrine/lexer",
@@ -541,13 +541,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:kiksaus/kikcms.git",
-                "reference": "dbe6dde685640074a82222cf0d669d5589c93c97"
+                "url": "https://github.com/krazzer/kikcms.git",
+                "reference": "bc6a3784b1e7b0f7205acf4e7fe1c3225f46110f"
             },
             "require": {
                 "google/apiclient": "^2.0",
                 "google/recaptcha": "^1.2",
-                "kiksaus/kikcms-core": "@dev",
+                "kiksaus/kikcms-core": "dev-master",
                 "martijnc/php-csp": "^1.0",
                 "nette/php-generator": "^3.1",
                 "twig/twig": "~1.0"
@@ -561,15 +561,15 @@
                     "KikCMS\\": "src"
                 }
             },
-            "time": "2019-03-29T10:32:39+00:00"
+            "time": "2019-06-07T07:27:30+00:00"
         },
         {
             "name": "kiksaus/kikcms-core",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:kiksaus/kikcms-core.git",
-                "reference": "24b85da605923bfae9e4cd4baec64053c966797b"
+                "url": "https://github.com/krazzer/kikcms-core.git",
+                "reference": "1919c28ea972570d103d9dcd4f59d9aff62085b2"
             },
             "require": {
                 "monolog/monolog": "^1.22",
@@ -581,7 +581,7 @@
                     "KikCmsCore\\": "src"
                 }
             },
-            "time": "2019-03-29T09:59:23+00:00"
+            "time": "2019-04-18T09:06:02+00:00"
         },
         {
             "name": "martijnc/php-csp",
