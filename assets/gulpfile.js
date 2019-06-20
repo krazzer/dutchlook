@@ -1,10 +1,11 @@
+var cssnano    = require('cssnano');
 var sass       = require('gulp-sass');
 var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
 var minify     = require('gulp-minify');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber    = require('gulp-plumber');
-var postcss    = require('postcss');
+var postcss    = require('gulp-postcss');
 var gulp       = require('gulp');
 
 var output = '../public_html/';
@@ -16,7 +17,7 @@ gulp.task('styles', function () {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(concat('app.css'))
-        .pipe(postcss[cssnano])
+        .pipe(postcss([cssnano]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(output + 'css'));
 });
@@ -29,7 +30,7 @@ gulp.task('vendorStyles', function () {
         .pipe(plumber())
         .pipe(concat('vendor.css'))
         .pipe(minify())
-        .pipe(postcss[cssnano])
+        .pipe(postcss([cssnano]))
         .pipe(gulp.dest(output + 'css'));
 });
 
