@@ -7,6 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var plumber    = require('gulp-plumber');
 var postcss    = require('gulp-postcss');
 var gulp       = require('gulp');
+var browserSync = require('browser-sync').create();
 
 var output = '../public_html/';
 
@@ -65,6 +66,14 @@ gulp.task('vendorScripts', function () {
 
 // Watch Files For Changes
 gulp.task('watch', function () {
-    gulp.watch(['js/*.js', '../vendor/kiksaus/kikcms-*/assets/js/*.js'], gulp.series('scripts'));
-    gulp.watch(['scss/*.scss', 'scss/**/*.scss', '../vendor/kiksaus/kikcms-*/assets/scss/*.scss'], gulp.series('styles'));
+    browserSync.init({
+        proxy: "https://localhost:9016",
+        port: 3016
+    });
+
+    gulp.watch(['js/*.js', '../vendor/kiksaus/kikcms-*/assets/js/*.js'], gulp.series('scripts'))
+        .on('change', browserSync.reload);
+
+    gulp.watch(['scss/*.scss', 'scss/**/*.scss', '../vendor/kiksaus/kikcms-*/assets/scss/*.scss'], gulp.series('styles'))
+        .on('change', browserSync.reload);
 });
