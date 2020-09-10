@@ -7,7 +7,7 @@ namespace Website\Services;
 use KikCMS\Models\Page;
 use KikCMS\Models\PageLanguage;
 use KikCmsCore\Services\DbService;
-use Phalcon\Di\Injectable;
+use KikCMS\Classes\Phalcon\Injectable;
 use Phalcon\Mvc\Model\Query\Builder;
 
 /**

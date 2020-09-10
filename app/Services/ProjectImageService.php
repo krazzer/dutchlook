@@ -5,7 +5,7 @@ namespace Website\Services;
 
 
 use KikCmsCore\Services\DbService;
-use Phalcon\Di\Injectable;
+use KikCMS\Classes\Phalcon\Injectable;
 
 /**
  * @property DbService $dbService
