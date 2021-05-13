@@ -6,6 +6,7 @@ namespace Website\DataTables;
 
 use KikCMS\Classes\DataTable\DataTable;
 use KikCMS\Models\PageLanguage;
+use Phalcon\Mvc\Model\Query\BuilderInterface;
 use Website\Forms\ProjectForm;
 use Website\Models\Project;
 
@@ -14,7 +15,7 @@ class Projects extends DataTable
     /**
      * @inheritdoc
      */
-    public function getDefaultQuery()
+    public function getDefaultQuery(): BuilderInterface
     {
         return parent::getDefaultQuery()
             ->columns([
