@@ -5,6 +5,7 @@ namespace Website\DataTables;
 
 
 use KikCMS\Classes\DataTable\DataTable;
+use Phalcon\Mvc\Model\Query\BuilderInterface;
 use Website\Forms\HomeImageForm;
 use Website\Models\HomeImage;
 use Website\Models\HomeImageRandom;
@@ -17,7 +18,7 @@ class HomeImages extends DataTable
     /**
      * @inheritdoc
      */
-    public function getDefaultQuery()
+    public function getDefaultQuery(): BuilderInterface
     {
         $query = parent::getDefaultQuery();
 

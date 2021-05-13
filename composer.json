@@ -10,10 +10,12 @@
     }
   ],
   "require": {
-    "kiksaus/kikcms": "dev-production",
-    "kiksaus/kikcms-core": "@dev"
+    "kiksaus/kikcms": "dev-phalcon4",
+    "kiksaus/kikcms-core": "dev-phalcon4"
   },
   "config": {
     "discard-changes": true
-  }
+  },
+  "name": "kiksaus/dutchlook",
+  "description": "Dutchlook Website"
 }
