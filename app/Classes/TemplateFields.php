@@ -9,7 +9,7 @@ use KikCMS\Classes\WebForm\Fields\ButtonField;
 use KikCMS\Classes\WebForm\Fields\DataTableField;
 use KikCMS\Classes\WebForm\Fields\TextField;
 use KikCMS\Classes\WebForm\Fields\WysiwygField;
-use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Filter\Validation\Validator\PresenceOf;
 use Website\DataTables\HomeImages;
 
 class TemplateFields extends TemplateFieldsBase

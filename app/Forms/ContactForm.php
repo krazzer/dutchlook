@@ -5,8 +5,8 @@ namespace Website\Forms;
 
 
 use KikCMS\Classes\WebForm\MailForm;
-use Phalcon\Validation\Validator\Email;
-use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Filter\Validation\Validator\Email;
+use Phalcon\Filter\Validation\Validator\PresenceOf;
 
 class ContactForm extends MailForm
 {

@@ -5,7 +5,7 @@ namespace Website\Forms;
 
 
 use KikCMS\Classes\WebForm\DataForm\DataForm;
-use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Filter\Validation\Validator\PresenceOf;
 use Website\Models\ProjectImage;
 
 class ProjectImageForm extends DataForm
