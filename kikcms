@@ -1,3 +1,2 @@
 <?php
-$sitePath = __DIR__ . '/';
-include(__DIR__ . '/vendor/kiksaus/kikcms/boot/cli.php');
+// file to make project work with kikdev docker

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="dutchlook.nl" id="58bed314-29a3-455a-ae10-27f4dbfc4c42" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" customName="Dutchlook" nameFormat="CUSTOM" username="dutchlook" useOpenSSHConfig="true">
+        <option name="customName" value="Dutchlook" />
+      </sshConfig>
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="dutchlook.nl" id="4e4a87ff-363e-4f15-8906-d9c75ad75362" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" customName="Dutchlook" nameFormat="CUSTOM" username="dutchlook">
+        <option name="customName" value="Dutchlook" />
+      </sshConfig>
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="dutchlook.nl" id="378fa8f0-def3-40e9-b57a-b9d630b2b79c" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" customName="Dutchlook" nameFormat="CUSTOM" username="dutchlook">
+        <option name="customName" value="Dutchlook" />
+      </sshConfig>
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="dutchlook.nl" id="6c9f99f2-b012-41cb-a217-940d345d632b" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" customName="Dutchlook" nameFormat="CUSTOM" username="dutchlook" useOpenSSHConfig="true">
+        <option name="customName" value="Dutchlook" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>
