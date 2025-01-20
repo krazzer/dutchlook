@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dutchlook</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <title>Dutchlook</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/glightbox@3.3.0/dist/css/glightbox.min.css">
 </head>
 <body>
 <main>
-  <div class="logo">
-    <img src="/images/logo.png" alt="Dutchlook logo">
-  </div>
-  <div class="intro">
-    <h1>Dutchlook visuele communicatie</h1>
-    Saskia Kerkhoff<br>
-    <a href="mailto:studio@dutchlook.com">studio@dutchlook.com</a><br><br>
-    Groene Hof 3<br>
-    1861 pk bergen<br><br>
-    <a href="tel:06 28 24 62 03">06 28 24 62 03</a>
-  </div>
-  <div class="work">
-
-  </div>
+    <div class="logo">
+        <img src="/images/logo.png" alt="Dutchlook logo">
+    </div>
+    <div class="intro">
+        <h1>Dutchlook visuele communicatie</h1>
+        Saskia Kerkhoff<br>
+        <a href="mailto:studio@dutchlook.com">studio@dutchlook.com</a><br><br>
+        Groene Hof 3<br>
+        1861 pk bergen<br><br>
+        <a href="tel:06 28 24 62 03">06 28 24 62 03</a>
+    </div>
+    <div class="work" x-data="app.component.dataHandler()">
+        <template x-for="image in images">
+            <a :href="'/images/beelden/' + image" class="glightbox" data-gallery="gallery"
+               :style="'background-image: url(' + '\'/images/beelden/thumbs/' + image + '\')'"></a>
+        </template>
+    </div>
 </main>
 </body>
 </html>

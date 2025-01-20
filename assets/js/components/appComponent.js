@@ -10,17 +10,34 @@ export class AppComponent {
      * Init component
      */
     init() {
-        document.addEventListener("DOMContentLoaded", () => {
-            this.initComponent();
-        });
-
         return this;
     }
 
-    /**
-     * Init component after DOM has loaded
-     */
-    initComponent(){
+    initGlightbox() {
+        GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: false,
+        });
+    }
 
+    dataHandler() {
+        let self = this;
+
+        return {
+            images: [],
+            init() {
+                fetch('/images.json')
+                    .then(response => response.json())
+                    .then(data => this.images = data)
+                    .then(() => this.onRenderComplete())
+                    .catch(error => console.error(error));
+            },
+            onRenderComplete() {
+                this.$nextTick(() => {
+                    self.initGlightbox();
+                });
+            },
+        };
     }
 }

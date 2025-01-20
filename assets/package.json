@@ -47,5 +47,8 @@
     "ES6+",
     "live reload",
     "Sass"
-  ]
+  ],
+  "dependencies": {
+    "@types/alpinejs": "^3.13.11"
+  }
 }
