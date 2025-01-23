@@ -61,6 +61,10 @@ main{
         background-position: center center;
         position: relative;
 
+        &:first-of-type{
+            animation: wiggle 3s linear infinite;
+        }
+
         &:before{
             content: '';
             background-color: rgba(0,0,0,.5);
@@ -105,5 +109,20 @@ a{
     img{
         display: inline-block;
         width: 200px;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(3deg);
     }
 }
